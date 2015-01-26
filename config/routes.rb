@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
 
-
+  #resources :contacts
   resources :posts
-
   resources :categories
 
   devise_for :users
+
   # Root Path
   root 'pages#home'
 
   # Static Paths
   get 'about' => 'pages#about'
   get 'help' => 'pages#help'
-  get 'contact' => 'pages#contact'
+  get 'contacts' => 'contacts#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
